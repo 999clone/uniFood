@@ -9,9 +9,9 @@ create table users(
     password varchar(50) not null,
     email varchar(50) not null unique,
     rule ENUM('student', 'teacher') not null,
-    student_number int not null unique,
-    academic_rank varchar(50) not null,
-    department_id int not null,
+    student_number int unique,
+    academic_rank varchar(50),
+    department_id int ,
     foreign key (department_id) references departments(id)
 );
 
@@ -42,4 +42,6 @@ create table orders(
     foreign key (user_id) references users(id),
     foreign key  (menu_item_id) references menu_items(id)
 );
+
+select * from orders;
 
