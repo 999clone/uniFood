@@ -23,7 +23,7 @@ create table foods(
 
 create table menus(
     id int auto_increment primary key,
-    menu_date date not null,
+    menu_date date not null
 );
 
 create table menu_items(
